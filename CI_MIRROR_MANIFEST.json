@@ -1,0 +1,53 @@
+{
+  "snapshot_version": "g8-20261001.1",
+  "source_repo": "olhgtd/ALGOFORTISGPT",
+  "source_pr": 25,
+  "source_sha": "3cfaba5d3768d116ff3999dd76e73c0a742943d1",
+  "gate": "G8",
+  "phase": 8,
+  "ai_authority": "RESEARCH_SHADOW_ONLY",
+  "approved_order_authority": "RISK_GATE_V2_ONLY",
+  "live_state": "READ_ONLY/DISARMED",
+  "real_money_trading_enabled": false,
+  "included_paths": [
+    "engine/ai/v2/**",
+    "engine/data/licensing.py",
+    "engine/core/adapter_registry.py",
+    "engine/reproducibility/codec.py",
+    "build/tools/check_phase8_ai_shadow.py",
+    "build/tools/phase8_ai_probe.py",
+    "tests_v1/test_phase8_*.py",
+    "tests_v1/test_v2_phase1_adapter_registry.py",
+    "tests_v1/test_v2_phase3_data_licensing.py",
+    "requirements-runtime.lock.txt",
+    "requirements-dashboard.in",
+    "requirements-test.in",
+    ".github/workflows/v2-phase8-ai-shadow.yml"
+  ],
+  "excluded_classes": [
+    "private_git_history",
+    "env_files",
+    "api_keys_tokens_passwords",
+    "private_keys_certificates",
+    "broker_credentials",
+    "local_databases_wal_shm",
+    "runtime_session_device_state",
+    "real_user_account_data",
+    "balances_positions_unrestricted_trade_logs",
+    "bulk_market_datasets",
+    "unrelated_strategies_dashboards_product_modules",
+    "generated_binaries_installers",
+    "unrelated_branches_pr_history"
+  ],
+  "expected_workflows": [
+    "g8-windows-latest",
+    "g8-windows-2022",
+    "g8-compare"
+  ],
+  "safety_markers": [
+    "AI_AUTHORITY=RESEARCH_SHADOW_ONLY",
+    "APPROVED_ORDER_AUTHORITY=RISK_GATE_V2_ONLY",
+    "LIVE_STATE=READ_ONLY/DISARMED",
+    "G8_ENABLES_REAL_MONEY_TRADING=NO"
+  ]
+}
