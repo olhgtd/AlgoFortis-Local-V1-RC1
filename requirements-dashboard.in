@@ -1,0 +1,5 @@
+# Phase 9 dashboard boundary.  Kept separate from the frozen engine runtime.
+fastapi==0.141.1
+starlette==0.49.3
+uvicorn[standard]==0.41.0
+fido2==2.0.0
